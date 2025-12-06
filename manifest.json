@@ -3,7 +3,18 @@
   "name": "Lock In - YouTube Blocker",
   "version": "1.0",
   "description": "Block YouTube and stay focused. Lock In.",
-  "permissions": [],
+  "permissions": ["storage"],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Toggle YouTube Blocker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*", "*://youtube.com/*"],
@@ -12,9 +23,15 @@
       "run_at": "document_start"
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["Svolder,_by_Otto_Sinding.jpg"],
+      "matches": ["*://*.youtube.com/*", "*://youtube.com/*"]
+    }
+  ],
   "icons": {
-    "16": "icons/icon16.svg",
-    "48": "icons/icon48.svg",
-    "128": "icons/icon128.svg"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }
