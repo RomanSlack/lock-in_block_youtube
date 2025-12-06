@@ -17,7 +17,8 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*", "*://youtube.com/*"],
+      "matches": ["*://www.youtube.com/*", "*://youtube.com/*"],
+      "exclude_matches": ["*://music.youtube.com/*"],
       "js": ["content.js"],
       "css": ["styles.css"],
       "run_at": "document_start"
@@ -26,7 +27,7 @@
   "web_accessible_resources": [
     {
       "resources": ["Svolder,_by_Otto_Sinding.jpg"],
-      "matches": ["*://*.youtube.com/*", "*://youtube.com/*"]
+      "matches": ["*://www.youtube.com/*", "*://youtube.com/*"]
     }
   ],
   "icons": {
