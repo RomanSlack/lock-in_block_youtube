@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Lock In - YouTube Blocker",
+  "version": "1.0",
+  "description": "Block YouTube and stay focused. Lock In.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}

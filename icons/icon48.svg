@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="bg48" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="gold48" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="50%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#8b6914"/>
+    </linearGradient>
+    <filter id="glow48">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="48" height="48" rx="8" fill="url(#bg48)"/>
+
+  <!-- Viking helmet -->
+  <path d="M24 8 L10 22 L10 32 Q10 40 24 42 Q38 40 38 32 L38 22 Z"
+        fill="url(#gold48)" stroke="#6b4c0a" stroke-width="1"/>
+
+  <!-- Helmet ridge -->
+  <path d="M24 8 L24 20" stroke="#8b6914" stroke-width="2"/>
+
+  <!-- Horns -->
+  <path d="M10 22 Q4 12 8 4" stroke="#c9a227" stroke-width="4" fill="none" stroke-linecap="round" filter="url(#glow48)"/>
+  <path d="M38 22 Q44 12 40 4" stroke="#c9a227" stroke-width="4" fill="none" stroke-linecap="round" filter="url(#glow48)"/>
+
+  <!-- Horn details -->
+  <path d="M10 22 Q5 14 7 6" stroke="#ffd700" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M38 22 Q43 14 41 6" stroke="#ffd700" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Eye slit -->
+  <rect x="14" y="26" width="20" height="4" rx="2" fill="#1a1a2e"/>
+
+  <!-- Eye glow -->
+  <ellipse cx="19" cy="28" rx="2" ry="1" fill="#ff6b35" opacity="0.8"/>
+  <ellipse cx="29" cy="28" rx="2" ry="1" fill="#ff6b35" opacity="0.8"/>
+
+  <!-- Nose guard -->
+  <path d="M24 26 L24 34" stroke="#8b6914" stroke-width="2"/>
+
+  <!-- Decorative rivets -->
+  <g fill="#ffd700">
+    <circle cx="14" cy="34" r="1.5"/>
+    <circle cx="34" cy="34" r="1.5"/>
+    <circle cx="18" cy="38" r="1"/>
+    <circle cx="30" cy="38" r="1"/>
+  </g>
+</svg>
